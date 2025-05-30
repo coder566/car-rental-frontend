@@ -19,17 +19,23 @@ const Registration = () => {
         setError('')
 
         try {
+            // @ts-ignore
             const response = await fetch('/api/auth/register', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({name, email, password}),
+                body: JSON.stringify({firstName:name, email, password}),
             })
 
             if (response.ok) {
                 router.push('/login')
             } else {
-                const data = await response.json()
-                setError(data.error || 'Произошла ошибка при регистрации')
+                let message = 'Произошла ошибка при регистрации'
+                try {
+                    const data = await response.json()
+                    message = data.error || message
+                } catch (_) {}
+                setError(message)
+
             }
         } catch (err) {
             setError('Произошла ошибка при подключении к серверу')
