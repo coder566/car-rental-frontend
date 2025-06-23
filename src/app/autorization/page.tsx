@@ -9,6 +9,7 @@ import {Label} from "@/components/ui/label";
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Header} from "@/components/component/header";
+import { Footer } from "@/components/component/footer";
 import {useAuth} from "@/context/AuthContext";
 import {getCurrentSession, setCurrentSession} from "@/lib/get-current-session";
 
@@ -83,25 +84,7 @@ export default function Page() {
                         </form>
                     </div>
                 </section>
-                <footer className="bg-primary text-primary-foreground py-4 px-6">
-                    <div className="container mx-auto flex justify-between items-center">
-                        <p>&copy; 2023 Car Rental. Все права защищены.</p>
-                        <nav>
-                            <ul className="flex space-x-4">
-                                <li>
-                                    <Link href="#" prefetch={false}>
-                                        Условия использования
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" prefetch={false}>
-                                        Политика конфиденциальности
-                                    </Link>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </footer>
+                <Footer />
             </main>
         </div>
     )
