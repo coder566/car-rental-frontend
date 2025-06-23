@@ -13,7 +13,7 @@ import {Car} from "@/types/car";
 import api from "@/lib/api";
 import {useAuth} from "@/context/AuthContext";
 import {useRouter} from "next/navigation";
-import {Footer} from "@/components/component/footer";
+
 
 export default function Page({params}: { params: Promise<{ id: number }> }) {
     const {id} = use(params);
@@ -108,26 +108,6 @@ export default function Page({params}: { params: Promise<{ id: number }> }) {
                     </div>
                 </section>
             </main>
-            {/*<footer className="bg-primary text-primary-foreground py-4 px-6">*/}
-            {/*    <div className="container mx-auto flex justify-between items-center">*/}
-            {/*        <p>&copy; 2023 Car Rental. Все права защищены.</p>*/}
-            {/*        <nav>*/}
-            {/*            <ul className="flex space-x-4">*/}
-            {/*                <li>*/}
-            {/*                    <Link href="#" prefetch={false}>*/}
-            {/*                        Условия использования*/}
-            {/*                    </Link>*/}
-            {/*                </li>*/}
-            {/*                <li>*/}
-            {/*                    <Link href="#" prefetch={false}>*/}
-            {/*                        Политика конфиденциальности*/}
-            {/*                    </Link>*/}
-            {/*                </li>*/}
-            {/*            </ul>*/}
-            {/*        </nav>*/}
-            {/*    </div>*/}
-            {/*</footer>*/}
-            <Footer />
         </div>
     )
 }

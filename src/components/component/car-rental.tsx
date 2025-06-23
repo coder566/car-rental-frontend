@@ -5,7 +5,6 @@ import {Button} from "@/components/ui/button"
 import {Calendar} from "@/components/ui/calendar"
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select"
 import {Input} from "@/components/ui/input"
-import {Footer} from "@/components/component/footer";
 
 export default function Index() {
     return (
@@ -103,26 +102,6 @@ export default function Index() {
                     </div>
                 </section>
             </main>
-            {/*<footer className="bg-primary text-primary-foreground py-4 px-6">*/}
-            {/*    <div className="container mx-auto flex justify-between items-center">*/}
-            {/*        <p>&copy; 2023 Car Rental. Все права защищены.</p>*/}
-            {/*        <nav>*/}
-            {/*            <ul className="flex space-x-4">*/}
-            {/*                <li>*/}
-            {/*                    <Link href="#" prefetch={false}>*/}
-            {/*                        Условия использования*/}
-            {/*                    </Link>*/}
-            {/*                </li>*/}
-            {/*                <li>*/}
-            {/*                    <Link href="#" prefetch={false}>*/}
-            {/*                        Политика конфиденциальности*/}
-            {/*                    </Link>*/}
-            {/*                </li>*/}
-            {/*            </ul>*/}
-            {/*        </nav>*/}
-            {/*    </div>*/}
-            {/*</footer>*/}
-            <Footer />
         </div>
     )
 }
