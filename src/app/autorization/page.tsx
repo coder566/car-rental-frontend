@@ -9,7 +9,7 @@ import {Label} from "@/components/ui/label";
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Header} from "@/components/component/header";
-import { Footer } from "@/components/component/footer";
+// import { Footer } from "@/components/component/footer";
 import {useAuth} from "@/context/AuthContext";
 import {getCurrentSession, setCurrentSession} from "@/lib/get-current-session";
 
@@ -48,7 +48,7 @@ export default function Page() {
     return (
         <div>
             <Header/>
-            <main>
+            <main className="flex-grow">
                 <section className="bg-white py-24 px-6">
                     <div className="container mx-auto max-w-md">
                         <h1 className="text-4xl font-bold mb-4 text-center">Авторизация</h1>
@@ -84,7 +84,7 @@ export default function Page() {
                         </form>
                     </div>
                 </section>
-                <Footer />
+               {/* <Footer />*/}
             </main>
         </div>
     )

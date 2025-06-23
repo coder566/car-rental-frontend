@@ -18,7 +18,7 @@ export default function RootLayout({
         <html lang="en" className="h-full">
         <body className={`${nunito.className} h-full m-0 p-0`}>
         <AuthProvider>
-            <div className="min-h-screen flex flex-col">
+            <div className="flex flex-col min-h-screen">
                 {children}
             </div>
         </AuthProvider>
