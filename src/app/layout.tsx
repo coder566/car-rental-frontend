@@ -1,7 +1,7 @@
-import {Nunito} from 'next/font/google';
+import { Nunito } from 'next/font/google';
 import './globals.scss';
 import React from "react";
-import {AuthProvider} from "@/context/AuthContext";
+import { AuthProvider } from "@/context/AuthContext";
 
 const nunito = Nunito({
     subsets: ['cyrillic'],
@@ -9,18 +9,18 @@ const nunito = Nunito({
     weight: ['400', '500', '600', '700', '800', '900'],
 });
 
-export default function RootLayout(
-    {
-        children
-    }: Readonly<{
-        children: React.ReactNode;
-    }>
-) {
+export default function RootLayout({
+                                       children
+                                   }: Readonly<{
+    children: React.ReactNode;
+}>) {
     return (
-        <html lang="en">
-        <body className={nunito.className}>
+        <html lang="en" className="h-full">
+        <body className={`${nunito.className} h-full m-0 p-0`}>
         <AuthProvider>
-            {children}
+            <div className="min-h-screen flex flex-col">
+                {children}
+            </div>
         </AuthProvider>
         </body>
         </html>
